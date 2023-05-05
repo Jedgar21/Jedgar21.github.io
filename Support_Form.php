@@ -5,17 +5,15 @@ $Name = $Post['Name'];
 $Email_Contact = $_Post['Email_Contact'];
 $Phone_Contact = $_Post['Phone_Contact'];
 $Message = $Post['Message'];
+$to = 'NEKTEchvt@gmail.com'
 
 #User input Filter
-function filter_email_header($form_field) {  
-    return preg_replace('/[nr|!/<>^$%*&]+/','',$form_field);
-    }
-
-$Email_Contact = filter_email_header($Email_Contact);
+$subject = "Support ticket";
+$body = $Name \n $Email_Contact \n $Phone_Contact \n $Message
 
 #Email Form
 $headers = "From: $Email_Contact";
-$sent = mail('NEKTechvt@gmail.com', 'Support Form', $Phone_Contact, $Message, $headers);
+$sent = mail($to, $subject, $body, $Email_Contact);
 
 
 #Sumbit Reply
@@ -30,7 +28,8 @@ if ($sent) {
     </body>
     </html>
 <?php
-} else {
+} 
+else {
     ?><html>
     <head>
     <Title> Something went Wrong</title>
