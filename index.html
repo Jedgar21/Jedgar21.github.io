@@ -190,7 +190,7 @@
                                 <i class="fa fa-cog text-white"></i>
                             </div>
                             <div class="text-center border-bottom p-4 pt-5">
-                                <h4 class="fw-bold">Computer Service & Repair</h4>
+                                <h4 class="fw-bold">Computer Service</h4>
                                 <a class="btn btn-primary px-4 py-2" href="">See More</a>
                             </div>
                         </div>
@@ -341,12 +341,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <h3 class="px-4">Send us a Message</h3>
+                    <form action="Support_form.php" method="post">
                     <div class="rounded" style="padding: 20px;">
-                        <input type="text" class="form-control border-0 py-2 mb-2" placeholder="Name">
-                        <input type="email" class="form-control border-0 py-2 mb-2" placeholder="Email">
-                        <input type="phone" class="form-control border-0 py-2 mb-2" placeholder="Phone Number">
-                        <textarea class="form-control border-0 mb-2" rows="2" placeholder="Message"></textarea>
-                        <button class="btn btn-primary w-100 py-2">Send Message</button>
+                        <input type="text" name="Name" class="form-control border-0 py-2 mb-2" placeholder="Name" required>
+                        <input type="email" name="Email_Contact" class="form-control border-0 py-2 mb-2" placeholder="Email" required>
+                        <input type="phone" name="Phone_Contact" class="form-control border-0 py-2 mb-2" placeholder="Phone Number">
+                        <textarea name="Message" class="form-control border-0 mb-2" rows="2" placeholder="Message" required></textarea>
+                        <button name="Submit" class="btn btn-primary w-100 py-2">Send Message</button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-6">
